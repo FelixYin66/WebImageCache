@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pGZ-IJ-gYc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6op-Cw-mBR">
+            <objects>
+                <tableViewController id="pGZ-IJ-gYc" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="rP8-9M-TTS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppCell" rowHeight="100" id="aNR-VO-SE6" customClass="AppCellTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aNR-VO-SE6" id="CoV-KD-Ie3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rC4-ME-Srh">
+                                            <rect key="frame" x="18" y="10" width="100" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="DoU-Cf-ARf"/>
+                                                <constraint firstAttribute="width" constant="100" id="oMu-iG-o5K"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App代号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tl7-Z4-Zpu">
+                                            <rect key="frame" x="146" y="10" width="58" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="Du0-fN-ruB"/>
+                                                <constraint firstAttribute="width" constant="58" id="zFg-r2-tdG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App下载量" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC2-KK-fdC">
+                                            <rect key="frame" x="146" y="66" width="63.5" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="IcV-tP-eCo"/>
+                                                <constraint firstAttribute="width" constant="63.5" id="ndG-cT-kWZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Tl7-Z4-Zpu" firstAttribute="top" secondItem="rC4-ME-Srh" secondAttribute="top" id="Bg3-4b-5xL"/>
+                                        <constraint firstItem="GC2-KK-fdC" firstAttribute="leading" secondItem="Tl7-Z4-Zpu" secondAttribute="leading" id="U7o-BO-R7O"/>
+                                        <constraint firstItem="rC4-ME-Srh" firstAttribute="top" secondItem="CoV-KD-Ie3" secondAttribute="topMargin" constant="2" id="kTn-Cv-wJQ"/>
+                                        <constraint firstItem="GC2-KK-fdC" firstAttribute="top" secondItem="Tl7-Z4-Zpu" secondAttribute="bottom" constant="37" id="lB8-9g-cwn"/>
+                                        <constraint firstItem="rC4-ME-Srh" firstAttribute="leading" secondItem="CoV-KD-Ie3" secondAttribute="leadingMargin" constant="10" id="leO-We-qJk"/>
+                                        <constraint firstItem="Tl7-Z4-Zpu" firstAttribute="leading" secondItem="CoV-KD-Ie3" secondAttribute="leadingMargin" constant="138" id="x7t-Sw-Otn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appImg" destination="rC4-ME-Srh" id="XVI-Ff-BNf"/>
+                                    <outlet property="appName" destination="Tl7-Z4-Zpu" id="zNC-UN-QgY"/>
+                                    <outlet property="downloadNum" destination="GC2-KK-fdC" id="rcS-X7-O7O"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pGZ-IJ-gYc" id="QvG-ju-cQS"/>
+                            <outlet property="delegate" destination="pGZ-IJ-gYc" id="9S2-SU-D4J"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3n-IE-VoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="464"/>
+        </scene>
+    </scenes>
+</document>
